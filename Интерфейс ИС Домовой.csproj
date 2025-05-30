@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Интерфейс_ИС_Домовой</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="i.jpg" />
+    <None Remove="WIN_20250527_11_05_39_Pro.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="i.jpg" />
+    <Resource Include="WIN_20250527_11_05_39_Pro.jpg" />
+  </ItemGroup>
+
+</Project>
