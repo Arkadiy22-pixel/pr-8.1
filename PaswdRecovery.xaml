@@ -48,7 +48,7 @@
         Foreground="White"
         HorizontalAlignment="Center" 
         Margin="0,220,0,0" 
-        VerticalAlignment="Top" Height="37" Width="250" FontSize="20" FontWeight="Bold">
+        VerticalAlignment="Top" Height="37" Width="250" FontSize="20" FontWeight="Bold" Click="BtnLog_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border CornerRadius="5" 

@@ -29,8 +29,9 @@ namespace Интерфейс_ИС_Домовой
 
         private void BtnLog_Click(object sender, RoutedEventArgs e)
         {
-            Applications applications = new Applications();
+            AllApplications applications = new AllApplications();
             applications.Show();
+            Close();
         }
     }
 }

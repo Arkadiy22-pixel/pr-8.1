@@ -15,15 +15,18 @@ using System.Windows.Shapes;
 namespace Интерфейс_ИС_Домовой
 {
     /// <summary>
-    /// Логика взаимодействия для Applications.xaml
+    /// Логика взаимодействия для AllApplications.xaml
     /// </summary>
-    public partial class Applications : Window
+    public partial class AllApplications : Window
     {
-        public Applications()
+        public AllApplications()
         {
             InitializeComponent();
         }
 
+        private void BtnSearch_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

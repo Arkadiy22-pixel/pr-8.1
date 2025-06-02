@@ -28,5 +28,10 @@ namespace Интерфейс_ИС_Домовой
         {
             MessageBox.Show("Ожидайте администратора", "Ожидание", MessageBoxButton.OK);
         }
+
+        private void BtnLog_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("На вашу почту или номер телефона отправленна ссылка для восстановления", "Ожидание", MessageBoxButton.OK);
+        }
     }
 }
