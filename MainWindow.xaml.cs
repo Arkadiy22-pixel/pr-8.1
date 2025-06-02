@@ -21,9 +21,16 @@ namespace Интерфейс_ИС_Домовой
             InitializeComponent();
         }
 
-        //private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        //{
+        private void labelPaswdRecovery_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            PaswdRecovery paswdRecovery = new PaswdRecovery();
+            paswdRecovery.Show();
+        }
 
-        //}
+        private void BtnLog_Click(object sender, RoutedEventArgs e)
+        {
+            Applications applications = new Applications();
+            applications.Show();
+        }
     }
 }

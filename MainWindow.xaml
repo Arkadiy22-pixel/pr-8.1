@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Интерфейс_ИС_Домовой"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Войти" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="TextBox" x:Key="RoundedTextBox">
             <Setter Property="Template">
@@ -55,7 +55,7 @@
                      HorizontalAlignment="Left" 
                      Margin="181,214,0,0" 
                      VerticalAlignment="Top" 
-                     Width="289" Height="26" 
+                     Width="396" Height="26" 
                      TabIndex="1"/>
         <TextBox x:Name="txtBLog" 
                  Style="{StaticResource RoundedTextBox}"
@@ -66,7 +66,7 @@
                  TextWrapping="Wrap" 
                  Text="" 
                  VerticalAlignment="Top" 
-                 Width="289" Height="24" 
+                 Width="396" Height="24" 
                  TabIndex="0"/>
         <Label Content="Логин" HorizontalAlignment="Left" Margin="81,155,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="42"/>
         <Label Content="Пароль" HorizontalAlignment="Left" Margin="73,202,0,0" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" Height="42" RenderTransformOrigin="0.542,1.408"/>
@@ -76,8 +76,8 @@
             Background="DarkBlue"
             Foreground="White"
             HorizontalAlignment="Left" 
-            Margin="286,264,0,0" 
-            VerticalAlignment="Top" Height="37" Width="79" FontSize="20" FontWeight="Bold">
+            Margin="340,260,0,0" 
+            VerticalAlignment="Top" Height="37" Width="78" FontSize="20" FontWeight="Bold" Click="BtnLog_Click">
             <Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Border CornerRadius="5" 
@@ -111,12 +111,12 @@
         <Label x:Name="labelPaswdRecovery" 
                Content="Забыли пароль?" 
                HorizontalAlignment="Left" 
-               Margin="495,211,0,0" 
+               Margin="592,211,0,0" 
                VerticalAlignment="Top" 
                FontSize="16" 
                FontWeight="Bold"
                Background="#00000000" 
-               Foreground="#FFC30E0E"/>
+               Foreground="#FFC30E0E" MouseLeftButtonDown="labelPaswdRecovery_MouseLeftButtonDown" RenderTransformOrigin="0.618,0.481"/>
 
 
 

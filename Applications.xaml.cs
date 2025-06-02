@@ -15,18 +15,15 @@ using System.Windows.Shapes;
 namespace Интерфейс_ИС_Домовой
 {
     /// <summary>
-    /// Логика взаимодействия для PaswdRecovery.xaml
+    /// Логика взаимодействия для Applications.xaml
     /// </summary>
-    public partial class PaswdRecovery : Window
+    public partial class Applications : Window
     {
-        public PaswdRecovery()
+        public Applications()
         {
             InitializeComponent();
         }
 
-        private void BtnLog_Копировать_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Ожидайте администратора", "Ожидание", MessageBoxButton.OK);
-        }
+
     }
 }
