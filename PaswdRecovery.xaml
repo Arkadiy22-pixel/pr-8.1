@@ -25,100 +25,103 @@
             <Setter Property="BorderThickness" Value="1"/>
         </Style>
     </Window.Resources>
-    <Grid Margin="0,0,0,-6">
-        <Grid.Background>
+    <DockPanel>
+        <DockPanel.Background>
             <ImageBrush ImageSource="/i.jpg"/>
-        </Grid.Background>
-        <Label Content="Восстановление пароля" HorizontalAlignment="Center" Height="46" Margin="0,20,0,0" VerticalAlignment="Top" Width="292" FontSize="24" FontWeight="Bold"/>
-        <Label Content="Введите e-mail или номер телефона,чтобы восстановить пароль" HorizontalAlignment="Center" Height="50" Margin="0,109,0,0" VerticalAlignment="Top" Width="780" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
-        <TextBox x:Name="txtBLog" 
-            Style="{StaticResource RoundedTextBox}"
-            Background="DarkBlue"
-            Foreground="White"
-            HorizontalAlignment="Center" 
-            TextWrapping="Wrap" 
-            Text="" 
-            VerticalAlignment="Top" 
-            Width="568" Height="28" 
-            TabIndex="0" Margin="0,164,0,0"/>
-        <Button 
+        </DockPanel.Background>
+        <StackPanel Height="432" >
+            <DockPanel Height="91" Width="800" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Восстановление пароля" DockPanel.Dock="Top"  Height="46" Width="292" FontSize="24" FontWeight="Bold" VerticalAlignment="Top"/>
+                <Label Content="Введите e-mail или номер телефона,чтобы восстановить пароль"  DockPanel.Dock="Top" Height="50" Margin="0,0,0,0" Width="780" FontSize="24" FontWeight="Bold"/>
+            </DockPanel>
+            <DockPanel Height="272" Width="796" HorizontalAlignment="Center" >
+                <TextBox x:Name="txtBLog" 
+Style="{StaticResource RoundedTextBox}"
+        DockPanel.Dock="Top"
+        Background="DarkBlue"
+        Foreground="White"
+        HorizontalAlignment="Center" 
+        TextWrapping="Wrap" 
+        Text="" 
+        VerticalAlignment="Top" 
+        Width="568" Height="28" 
+        TabIndex="0" Margin="0,20,0,0"/>
+                <Button 
         x:Name="BtnLog" 
         Content="Восстановить" 
         Background="DarkBlue"
         Foreground="White"
-        HorizontalAlignment="Center" 
-        Margin="0,220,0,0" 
-        VerticalAlignment="Top" Height="37" Width="250" FontSize="20" FontWeight="Bold" Click="BtnLog_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="5" 
+        Height="37" Width="250" FontSize="20" FontWeight="Bold" Click="BtnLog_Click"  Margin="0,20,0,0" DockPanel.Dock="Top">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="5" 
                     Background="{TemplateBinding Background}" 
                     BorderBrush="{TemplateBinding BorderBrush}" 
                     BorderThickness="{TemplateBinding BorderThickness}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard Name="BlinkStoryboard">
-                                    <Storyboard RepeatBehavior="Forever" AutoReverse="True">
-                                        <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
-                                        To="White" Duration="0:0:1"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                            <Trigger.ExitActions>
-                                <StopStoryboard BeginStoryboardName="BlinkStoryboard"/>
-                            </Trigger.ExitActions>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
-        <Button 
-            x:Name="BtnLog_Копировать" 
-            Content="Вызвать администратора" 
-            Background="#FFDF0E0E"
-            Foreground="White"
-            HorizontalAlignment="Left" 
-            Margin="508,368,0,0" 
-            VerticalAlignment="Top" Height="37" Width="270" FontSize="20" FontWeight="Bold" Click="BtnLog_Копировать_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="5" 
-                        Background="{TemplateBinding Background}" 
-                        BorderBrush="{TemplateBinding BorderBrush}" 
-                        BorderThickness="{TemplateBinding BorderThickness}">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
-            <Button.Style>
-                <Style TargetType="{x:Type Button}">
-                    <Style.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Trigger.EnterActions>
-                                <BeginStoryboard x:Name="BlinkStoryboard">
-                                    <Storyboard RepeatBehavior="Forever" AutoReverse="True">
-                                        <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
-                                            To="White" Duration="0:0:1"/>
-                                    </Storyboard>
-                                </BeginStoryboard>
-                            </Trigger.EnterActions>
-                            <Trigger.ExitActions>
-                                <StopStoryboard BeginStoryboardName="BlinkStoryboard"/>
-                            </Trigger.ExitActions>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Name="BlinkStoryboard">
+                                            <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                                                <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)"
+                        To="White" Duration="0:0:1"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <StopStoryboard BeginStoryboardName="BlinkStoryboard"/>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button 
+x:Name="BtnLog_Копировать" 
+Content="Вызвать администратора" 
+Background="#FFDF0E0E"
+Foreground="White" 
+Height="37" Width="270" FontSize="20" FontWeight="Bold" Click="BtnLog_Копировать_Click" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border CornerRadius="5" 
+            Background="{TemplateBinding Background}" 
+            BorderBrush="{TemplateBinding BorderBrush}" 
+            BorderThickness="{TemplateBinding BorderThickness}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard x:Name="BlinkStoryboard">
+                                            <Storyboard RepeatBehavior="Forever" AutoReverse="True">
+                                                <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)"
+                                To="White" Duration="0:0:1"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </Trigger.EnterActions>
+                                    <Trigger.ExitActions>
+                                        <StopStoryboard BeginStoryboardName="BlinkStoryboard"/>
+                                    </Trigger.ExitActions>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </DockPanel>
+        </StackPanel>
 
 
 
-    </Grid>
+    </DockPanel>
 </Window>
