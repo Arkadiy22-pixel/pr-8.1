@@ -1,0 +1,15 @@
+﻿<Window x:Class="Интерфейс_ИС_Домовой.WindowUrgently"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Интерфейс_ИС_Домовой"
+        mc:Ignorable="d"
+        Title="По срочности" Height="229" Width="427">
+    <Grid MinWidth="427" MaxWidth="427" MinHeight="213.04" MaxHeight="213.04">
+        <Button Content="Срочно" HorizontalAlignment="Center" Margin="0,54,0,0" VerticalAlignment="Top" FontSize="18" Background="#FFF54848" Width="138" FontWeight="Bold"/>
+        <Button Content="Не срочно" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Background="#FF2FDE17" Width="138" FontWeight="Bold"/>
+        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Background="#FFDE3B17" Width="82" FontWeight="Bold" Margin="335,175,0,0" Click="Button_Click"/>
+
+    </Grid>
+</Window>

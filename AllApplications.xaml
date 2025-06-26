@@ -8,7 +8,6 @@
         Title="AllApplications" Height="600" Width="1200">
     <DockPanel LastChildFill="True">
 
-        <!-- Меню сверху -->
         <Menu DockPanel.Dock="Top" Height="23" MaxWidth="100000000" MaxHeight="450" Background="#FFF0F0F0" Width="1200" HorizontalAlignment="Stretch">
             <MenuItem Header="Файл" Width="40">
                 <Separator/>
@@ -32,8 +31,7 @@
                 </MenuItem>
                 <MenuItem Header="Поиск заявки">
                     <MenuItem.Icon>
-                        <Path Width="16" Height="16" Stroke="Black" StrokeThickness="2" Fill="Transparent"
-                              Data="M10,2 A7,7 0 1 1 9.99,2 M14.5,14.5 L20,20" />
+                        <Image Source="pngwing.com (7).png" Width="16" Height="16" />
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator/>
@@ -53,7 +51,6 @@
                 <MenuItem Header="О программе"/>
             </MenuItem>
         </Menu>
-        <!-- Панель поиска под меню -->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
             <Label Content="Поиск" Width="93" Height="38" FontSize="20" FontWeight="Bold" 
                    HorizontalContentAlignment="Center" VerticalAlignment="Center" />
@@ -85,9 +82,16 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
+            <Label Content="Фильтрация" Width="151" Height="38" FontSize="20" FontWeight="Bold" 
+                HorizontalContentAlignment="Center" />
+            <ComboBox x:Name="comboBoxFilter" Width="172" Height="26"
+                SelectionChanged="MyComboBox_SelectionChanged">
+                <ComboBoxItem Content="По дате" Tag="По дате"/>
+                <ComboBoxItem Content="По статусу" Tag="По статусу"/>
+                <ComboBoxItem Content="По cрочности" Tag="По срочности"/>
+            </ComboBox>
         </StackPanel>
 
-        <!-- DataGrid занимает всё оставшееся пространство -->
         <DataGrid x:Name="applications" Margin="10" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="100"/>

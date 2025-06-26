@@ -1,0 +1,37 @@
+﻿<Window x:Class="Интерфейс_ИС_Домовой.WindowDate"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Интерфейс_ИС_Домовой"
+        mc:Ignorable="d"
+        Title="Выбрать диапазон дат" Height="279" Width="474" MaxWidth="437" MaxHeight="279" MinHeight="279" MinWidth="437">
+    <Grid>
+        <Label Content="Выберите диапазон дат по которому будет фильтрация" HorizontalAlignment="Center" Margin="0,28,0,0" VerticalAlignment="Top" Width="340" Height="28" FontWeight="Bold"/>
+        <DatePicker HorizontalAlignment="Center" Height="27" Margin="0,74,0,0" VerticalAlignment="Top" Width="260"/>
+        <Label Content="C" HorizontalAlignment="Left" Margin="55,74,0,0" VerticalAlignment="Top" Width="26" Height="28" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.782"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.348"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <DatePicker HorizontalAlignment="Center" Height="27" VerticalAlignment="Center" Width="260"/>
+        <Label Content="По" HorizontalAlignment="Left" Margin="55,0,0,0" VerticalAlignment="Center" Width="26" Height="28" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.782"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.348"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button Content="ОК" HorizontalAlignment="Center" Height="30" Margin="0,181,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click" Background="#FF13DA1F" FontWeight="Bold"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Height="30" Margin="326,223,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click" Background="#FFDA3713" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

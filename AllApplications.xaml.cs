@@ -28,5 +28,32 @@ namespace Интерфейс_ИС_Домовой
         {
 
         }
+
+        private void MyComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (comboBoxFilter.SelectedItem is ComboBoxItem selectedItem)
+            {
+                string selectedValue = selectedItem.Tag as string;
+
+                switch (selectedValue)
+                {
+                    case "По дате":
+                        WindowDate windowDate = new WindowDate();
+                        windowDate.Show(); 
+                        break;
+                    case "По статусу":
+                        WindowStatus window2 = new WindowStatus();
+                        window2.Show();
+                        break;
+                    case "По срочности":
+                        WindowUrgently windowUrgently = new WindowUrgently();
+                        windowUrgently.Show(); 
+                        break;
+                    default:
+                        MessageBox.Show("Неизвестное значение");
+                        break;
+                }
+            }
+        }
     }
 }
